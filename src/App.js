@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Input from "./components/inputs/Input";
 import Screen from "./components/calculator screen/Screen";
 import Button from "./components/simbol button/Button";
+import CalculateBtn from "./components/calculate button/CalculateBtn";
 
 function App() {
   const [inputValue, setInputValue] = useState(undefined);
@@ -53,6 +54,12 @@ function App() {
         setResult={setResult}
         simbol={"/"}
         setSimbol={setSimbol}
+      />
+      <CalculateBtn
+        value1={inputValue}
+        value2={inputValue2}
+        setResult={setResult}
+        simbol={simbol}
       />
     </div>
   );
