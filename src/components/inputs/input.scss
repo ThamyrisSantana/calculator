@@ -1,0 +1,25 @@
+input {
+  width: 13rem;
+  height: 2rem;
+
+  font-size: 1rem;
+  color: #535353;
+  font-weight: 560;
+
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+  background-color: #fafafa;
+
+  border: 1px solid #b1b1b1;
+  border-radius: 3px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

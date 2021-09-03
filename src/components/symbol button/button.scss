@@ -1,0 +1,13 @@
+.btn {
+  width: 12rem;
+  height: 4rem;
+  cursor: pointer;
+
+  border: none;
+  color: #535353;
+  font-size: 2rem;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./button.scss";
 
 const Button = ({ setSymbol, symbol }) => {
   function sumNumbers() {
@@ -7,7 +8,9 @@ const Button = ({ setSymbol, symbol }) => {
 
   return (
     <div>
-      <button onClick={sumNumbers}>{symbol}</button>
+      <button className="btn" onClick={sumNumbers}>
+        {symbol}
+      </button>
     </div>
   );
 };

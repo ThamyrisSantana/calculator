@@ -1,4 +1,5 @@
 import React from "react";
+import "./calculateBtn.scss";
 
 const CalculateButton = ({ value1, value2, setResult, symbol }) => {
   function calculate() {
@@ -24,9 +25,9 @@ const CalculateButton = ({ value1, value2, setResult, symbol }) => {
     }
   }
   return (
-    <div>
-      <button onClick={calculate}>=</button>
-    </div>
+    <button className="button" onClick={calculate}>
+      =
+    </button>
   );
 };
 

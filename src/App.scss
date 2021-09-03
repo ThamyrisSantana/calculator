@@ -1,0 +1,79 @@
+:root {
+  --white: #fff;
+  --background: #f2f3f5;
+  --gray-line: #eeeeee;
+  --text: #666666;
+  --text-highlight: #b3b9ff;
+  --title: #2e384d;
+  --red: #e83f5b;
+  --green: #4cd62b;
+  --blue: #5965e0;
+  --blue-dark: #4053b8;
+  --blue-twitter: #2aa9e0;
+}
+/* 
+
+SB - Symbol Button
+CB - Calculate Button
+IA - Inpput Area
+SA -  Screen Area
+
+*/
+
+.App {
+  width: 30rem;
+  height: 16rem;
+
+  display: flex;
+  flex-direction: column;
+
+  display: grid;
+  grid-template-columns: 24rem 6rem;
+  grid-template-rows: 5rem 3rem 8rem;
+
+  grid-template-areas:
+    "SA SA"
+    "IA IA"
+    "SB CB";
+
+  background-color: var(--gray-line);
+
+  .screen-container {
+    grid-area: SA;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input-container {
+    width: 30rem;
+    grid-area: IA;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons-container {
+    width: 30rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .symbol-btn-container {
+      width: 24rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      grid-area: SB;
+    }
+
+    .calculate-btn-container {
+      width: 6rem;
+      grid-area: CB;
+    }
+  }
+}
