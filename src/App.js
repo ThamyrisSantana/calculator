@@ -31,8 +31,6 @@ function App() {
         <div className="symbol-btn-container">
           <Button
             className="btn"
-            value1={inputValue}
-            value2={inputValue2}
             setResult={setResult}
             symbol={"+"}
             setSymbol={setSymbol}
@@ -40,8 +38,6 @@ function App() {
 
           <Button
             className="btn"
-            value1={inputValue}
-            value2={inputValue2}
             setResult={setResult}
             symbol={"-"}
             setSymbol={setSymbol}
@@ -49,8 +45,6 @@ function App() {
 
           <Button
             className="btn"
-            value1={inputValue}
-            value2={inputValue2}
             setResult={setResult}
             symbol={"*"}
             setSymbol={setSymbol}
@@ -58,8 +52,6 @@ function App() {
 
           <Button
             className="btn"
-            value1={inputValue}
-            value2={inputValue2}
             setResult={setResult}
             symbol={"/"}
             setSymbol={setSymbol}

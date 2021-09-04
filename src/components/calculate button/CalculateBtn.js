@@ -24,6 +24,7 @@ const CalculateButton = ({ value1, value2, setResult, symbol }) => {
       setResult(divNum);
     }
   }
+
   return (
     <button className="button" onClick={calculate}>
       =

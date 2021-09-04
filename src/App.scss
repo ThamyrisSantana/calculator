@@ -22,14 +22,14 @@ SA -  Screen Area
 
 .App {
   width: 30rem;
-  height: 16rem;
+  height: 17rem;
 
   display: flex;
   flex-direction: column;
 
   display: grid;
   grid-template-columns: 24rem 6rem;
-  grid-template-rows: 5rem 3rem 8rem;
+  grid-template-rows: 6rem 3rem 8rem;
 
   grid-template-areas:
     "SA SA"
