@@ -1,10 +1,9 @@
 import React from "react";
 import "./button.scss";
 
-const Button = ({ setSymbol, symbol, setResult }) => {
+const Button = ({ symbol, setSymbol }) => {
   function sumNumbers() {
     setSymbol(symbol);
-    setResult("");
   }
 
   return (
