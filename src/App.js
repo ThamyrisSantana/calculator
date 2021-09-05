@@ -2,15 +2,20 @@ import "./App.scss";
 import React, { useState } from "react";
 
 import Input from "./components/inputs/Input";
-import Screen from "./components/calculator screen/Screen";
-import Button from "./components/symbol button/Button";
-import CalculateBtn from "./components/calculate button/CalculateBtn";
+import Screen from "./components/calculator-screen/Screen";
+import Button from "./components/symbol-button/Button";
+import CalculateBtn from "./components/calculate-button/CalculateBtn";
 
 function App() {
-  const [inputValue, setInputValue] = useState(undefined);
-  const [inputValue2, setInputValue2] = useState(undefined);
+  const [inputValue, setInputValue] = useState("");
+  const [inputValue2, setInputValue2] = useState("");
   const [result, setResult] = useState(undefined);
-  const [symbol, setSymbol] = useState([]);
+  const [symbol, setSymbol] = useState(undefined);
+
+  const handleSymbol = (symbol) => {
+    setSymbol(symbol);
+    setResult("");
+  };
 
   return (
     <div className="App">
@@ -23,39 +28,19 @@ function App() {
         />
       </div>
       <div className="input-container">
-        <Input setInputNumber={setInputValue} />
-        <Input setInputNumber={setInputValue2} />
+        <Input value={inputValue} setInputNumber={setInputValue} />
+        <Input value={inputValue2} setInputNumber={setInputValue2} />
       </div>
 
       <div className="buttons-container">
         <div className="symbol-btn-container">
-          <Button
-            className="btn"
-            setResult={setResult}
-            symbol={"+"}
-            setSymbol={setSymbol}
-          />
+          <Button className="btn" symbol={"+"} setSymbol={handleSymbol} />
 
-          <Button
-            className="btn"
-            setResult={setResult}
-            symbol={"-"}
-            setSymbol={setSymbol}
-          />
+          <Button className="btn" symbol={"-"} setSymbol={handleSymbol} />
 
-          <Button
-            className="btn"
-            setResult={setResult}
-            symbol={"*"}
-            setSymbol={setSymbol}
-          />
+          <Button className="btn" symbol={"*"} setSymbol={handleSymbol} />
 
-          <Button
-            className="btn"
-            setResult={setResult}
-            symbol={"/"}
-            setSymbol={setSymbol}
-          />
+          <Button className="btn" symbol={"/"} setSymbol={handleSymbol} />
         </div>
         <div className="calculate-btn-container">
           <CalculateBtn
